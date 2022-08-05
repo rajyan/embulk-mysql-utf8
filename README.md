@@ -23,11 +23,10 @@ Cannot insert. `Incorrect string value: '\xF0\x9F\x8D\xBA\xF0\x9F...' for column
 ## 3. using `driver_path` mysql-connector-java-5.1.49
 
 ```
-docker compose run --rm embulk bash -c '/usr/local/bin/embulk run /config-ng3.yml'
+docker compose run --rm embulk bash -c '/usr/local/bin/embulk run /config-ok.yml'
 ```
 
-Can insert, but 4 byte chars are broken
-美味しい🍣と🍺 => 美味しい?と?
+Works!
 
 ## 4. Setting `mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci`
 
