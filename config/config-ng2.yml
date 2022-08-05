@@ -1,0 +1,27 @@
+in:
+  type: file
+  path_prefix: test
+  parser:
+    charset: UTF-8
+    newline: LF
+    type: csv
+    delimiter: ','
+    quote: '"'
+    escape: '"'
+    null_string: 'NULL'
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+      - {name: id, type: long}
+      - {name: comment, type: string}
+out:
+  type: mysql
+  host: mysql
+  mode: truncate_insert
+  user: root
+  password: root
+  database: embulk_test
+  table: example
+  options: { characterEncoding: UTF-8 }
