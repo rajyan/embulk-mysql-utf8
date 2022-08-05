@@ -24,4 +24,5 @@ out:
   password: root
   database: embulk_test
   table: example
-  options: { characterEncoding: UTF-8 }
+  create_table_option: DEFAULT CHARSET=utf8mb4
+  options: { useUnicode: true, characterEncoding: UTF-8 }

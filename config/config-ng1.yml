@@ -24,3 +24,4 @@ out:
   password: root
   database: embulk_test
   table: example
+  create_table_option: DEFAULT CHARSET=utf8mb4

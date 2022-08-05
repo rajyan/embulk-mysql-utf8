@@ -26,7 +26,8 @@ Cannot insert. `Incorrect string value: '\xF0\x9F\x8D\xBA\xF0\x9F...' for column
 docker compose run --rm embulk bash -c '/usr/local/bin/embulk run /config-ng3.yml'
 ```
 
-Same as 2.
+Can insert, but 4 byte chars are broken
+美味しい🍣と🍺 => 美味しい?と?
 
 ## 4. Setting `mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci`
 
